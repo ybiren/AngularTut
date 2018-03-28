@@ -1,0 +1,17 @@
+﻿<style>
+.brdr {
+	border: 1px solid black;
+	padding: 0;
+	display:block;
+	height: 40px;
+}
+.bgred {
+	background-color: red;
+}
+</style>
+
+
+<div class="row">
+
+	<div class="col-sm-1 brdr" ng-repeat="x in [].constructor(12) track by $index" ng-class="{ bgred:isContained($index) }"  ></div>
+</div>

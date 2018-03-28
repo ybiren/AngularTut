@@ -1,0 +1,26 @@
+﻿<DIALOG id="signDialog">
+	<FORM method="dialog">
+		<section>
+			<div>DDDDDDDD{{wikiUrl}}</div>
+			<table>
+				<tr>
+					<td align="center">
+						<button onclick="signDialog.close();" class="redYellowButton">יציאה</button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<INPUT type="signature" name="sign" data-background="yellow" data-pen="black" data-penWidth="3" data-width="310" data-height="180">
+					</td>
+				</tr>
+				<tr>
+					<td align="center">
+						<INPUT type="button" id="btnClearSign" onclick="signature.getSignatureCanvas('sign').clear();" value="נקה">
+					</td>
+				</tr>
+			</table>
+		  <button ng-click="DoSomething()">DoSomething</button>
+		  <ng-transclude></ng-transclude>
+</section>
+	</FORM>
+</DIALOG>

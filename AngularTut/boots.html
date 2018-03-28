@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html>
+<html>
+<head style="margin-bottom: 30px; ">
+    <title>boot strap</title>
+	<meta charset="utf-8" />
+
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+
+<style>
+ .bbottom5 {
+	 border-bottom: 1px solid blue;
+}
+.headerow {
+	background-color: green; 
+} 
+
+.headerow::after {
+	content: "text after header row"; 
+}
+
+.headerow:hover {
+	background-color: lightgreen; 
+} 
+
+
+.subrow:nth-child(odd) {
+	background-color: #e1e1e1; 
+}
+
+.subrow:nth-child(even) {
+	background-color: yellow; 
+}
+
+.sec {
+	background-color: #eee;
+	margin-right: 20px;
+	display: inline-flex;
+	height: 100%;
+}
+
+.inputrow input {
+	margin-right: 10px; 
+	margin-bottom: 10px; 
+
+}
+
+</style>
+
+</head>
+<body class="container-fluid">
+
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">Brand</a>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+					<li><a href="#">Link</a></li>
+
+				</ul>
+
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#">Link</a></li>
+
+				</ul>
+			</div><!-- /.navbar-collapse -->
+		</div><!-- /.container-fluid -->
+	</nav>
+
+	<div class="row">
+	  <div class="col-sm-5 col-sm-offset-1">
+	  left
+		</div>
+		<div class="col-sm-5" style="text-align:right">
+			right
+		</div>
+	</div>
+
+   <div class="page-header">
+		<h1>Example Page Header</h1>
+	</div>
+
+
+
+
+
+  <section class="col-sm-1 col-md-1 sec">
+	<div><a href="cc">dddd</a></div>
+  <div><a href="cc">dddd</a></div>
+	<div><a href="cc">dddd</a></div>
+	</section>
+  <section class="col-sm-5 col-md-5">
+			<div class="row inputrow">
+				<input type="text" class="col-sm-offset-1 col-sm-3"/>
+				<input type="text" class="col-sm-3" />
+				<input type="text" class="col-sm-3" />
+			</div>
+			<div ng-repeat="name in names" ng-if="$index==currPage">
+				<div  class="row headerow">
+					<div class="col-md-offset-1 col-sm-offset-1 col-md-6 col-sm-3">
+						{{name.pname}}
+					</div>
+					<div class="col-md-5 col-sm-8">
+						{{name.fname}}
+					</div>
+				</div>
+				<div ng-repeat="dat in name.data" class="hidden-sm">
+					<div class="row subrow">
+						<div class="col-md-offset-2 col-sm-offset-2 col-md-1 col-sm-1 col-md-push-8" ng-class="{bbottom:$index == name.data.length-1}">
+							{{dat.data2}}
+						</div>
+						<div class="col-md-9 col-sm-9" ng-class="{bbottom:$index == name.data.length-1}">
+							{{dat.data1}}
+						</div>
+					</div>
+				</div>
+			</div>
+			<ul class="pagination" ng-repeat="x in [].constructor(2) track by $index">
+				<li><a href="" ng-click="SetPage($index)" eat-click>{{$index}}</a></li>
+			</ul>
+</section>
+<section class="vol-sm-5 col-md-6" ng-app="mySepModule">
+		<my-sep></my-sep>
+</section>
+<!--
+
+<footer class="container">
+		<div class="footer-copyright">
+			<div class="container-fluid">
+				© 2016 Copyright: <a href="https://www.MDBootstrap.com"> MDBootstrap.com </a>
+			</div>
+		</div>
+	</footer>
+	-->
+
+</body>
+</html>

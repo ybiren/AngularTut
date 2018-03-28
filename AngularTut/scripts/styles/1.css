@@ -1,0 +1,54 @@
+﻿.selected {
+	background-color: #ff0000;
+	transition: background-color 5.5s ease;
+
+}
+
+.hdrRow {
+	background-color: lightblue;
+  width: 330px;
+	padding-left: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.hdrRow span {
+	min-width: 110px;
+	width: 110px;
+	display: inline-block;
+}
+
+.hdrRow input {
+	width: 80px;
+	background-color: lightgray;
+}
+
+.dataRow {
+	margin-top: 5px;
+	padding-left: 20px;
+	background-color: #ffffff;
+	border-bottom: 1px solid blue; 
+  width: 330px;
+}
+.dataRow span {
+	min-width: 110px;
+	width: 110px;
+	display: inline-block;
+}
+
+ .selected2 {
+	background-color: lightyellow;
+  transition : background-color 0.5s ease
+} 
+.selected2:hover {
+	background-color:green;
+  
+}
+
+ section  div {
+	 color: red;
+ }
+ section  div span{
+	 color: green;
+ }
+

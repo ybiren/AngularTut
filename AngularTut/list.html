@@ -1,0 +1,105 @@
+﻿<style>
+
+span > h1 {
+	background-color: red; 
+}
+</style>
+
+
+
+<div ng-repeat="itm in names">
+	<div>
+		{{itm.name}}
+	</div>
+</div>
+<a href="#/dtls/2">dfdfdfdfdfdfd</a>
+
+<button ng-click="DoRoute()">route</button>
+<button ng-click="InjSvc()">inject service dynamicaly</button>
+<button ng-click="ShowModal('ss','ff')">show modal</button>
+
+
+<span>
+   <div>
+	 </div>
+	<h1>gdfgdfgdfgdfgdfgdsasdassdgdfhfh</h1>
+
+</span>
+
+
+
+<div>{{ ::param }}</div>
+<input type="text" ng-model="param"/>
+
+<my-component pname="yossi" fname="birenboim"></my-component>
+
+<section>
+	<form novalidate name="form1">
+
+		<div ng-show="form1.input1.$pristine">input1 pristine</div>
+		<div ng-show="form1.input2.$dirty">input2 dirty</div>
+		<fieldset>
+			<input type="text" ng-model="input1" name="input1"><br>
+			<input type="text" ng-model="input2" name="input2">
+		</fieldset>
+	</form>
+
+</section>
+
+<input type="text" ng-model="name1" yoss-capitalize len-three="func1();"/>
+
+<button ng-click="SendDataToDtls()">SendDataToDtls</button>
+
+
+<wiki-pedia wiki-url="{{wikiUrl2}}" customer="person">
+	<div>hi from transclude</div>
+  <trans-dir color="car"></trans-dir>
+	<trans-dir color="bell"></trans-dir>
+	<trans-dir color="bug"></trans-dir>
+</wiki-pedia>
+
+<button ng-click="SendReqToWiki()">Send req to wiki</button>
+
+<button ng-click="SetWikiUrl('XXXX')">set wiki url</button>
+
+
+
+
+<div>{{person.name}}</div>
+<div>{{wikiTxt | wikiFltr:');':'&lt;/body&gt;'}}</div>
+<div>{{wikiTxt1}}</div>
+
+
+
+<section>
+<div ng-repeat="itm in wikiDat">
+	<div><a ng-click="SetWikiUrl(itm.href)"  >{{itm.title}}</a></div>
+</div>
+</section>
+
+<div ng-repeat="itm in names">
+	<div ng-click="SelItem(itm.index)" ng-class="{'selected':isSelected == itm.index}" >{{itm.name}}</div>
+</div>
+ 
+
+<div class="hdrRow"><span><input type="text"></span><span><input type="text"></span><span><input type="text"></span></div>
+<div  class="dataRow" ng-click="isSelected2 = true" ng-class="{'selected2' : isSelected2}" ><span>AA</span><span>BB</span><span>CC</span></div>
+<div class="dataRow"><span>AAA</span><span>BBB</span><span>CCC</span></div>
+
+<section>
+<div>
+red div
+<span>green span</span>
+</div>
+</section>
+
+
+<!--
+
+
+
+<div ui-grid="myGrid"  style="width: 100%; height:200px;" ></div>
+-->
+
+	<!--<div ng-controller="dtls">sdsdsd</div>-->
+	<!--<iframe src="http://localhost:49722/index.html#/dtls/4?vvv=5" width="600" height="400"/>-->
